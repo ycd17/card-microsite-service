@@ -1,0 +1,26 @@
+<h1>Listado de Tipos</h1>
+<mat-divider></mat-divider>
+<br>
+
+<mat-card *ngFor="let creditCard of creditCards" class="example-card">
+    <mat-card-header>
+        <mat-card-title>
+            {{ creditCard.owner.name}} 
+            {{ creditCard.owner.lastName}}
+        </mat-card-title>
+        <mat-card-subtitle>{{ creditCard.owner.status}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            <strong>Tipo de tarjeta: </strong> {{creditCard.type.type}}
+            <br>
+            <strong>Franquisia: </strong> {{creditCard.franchise.franchise}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+        <button mat-button color="primary">
+            Editar ...
+        </button>
+    </mat-card-actions>
+</mat-card>
